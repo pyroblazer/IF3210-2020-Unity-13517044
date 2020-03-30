@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using UnityEngine;
 
 public class GameMaster : MonoBehaviour
@@ -27,6 +28,11 @@ public class GameMaster : MonoBehaviour
         Instantiate(playerPrefab, spawnPoint.position, spawnPoint.rotation);
         Transform clone = Instantiate(spawnPrefab, spawnPoint.position, spawnPoint.rotation) as Transform;
         Destroy(clone.gameObject, 3.0f);
+    }
+
+    internal static void KillEnemy(Enemy enemy)
+    {
+        Destroy(enemy.gameObject);
     }
 
     public static void KillPlayer(Player player)

@@ -4,7 +4,7 @@ using System.Collections;
 public class Weapon : MonoBehaviour
 {
 	public float fireRate = 0f;
-	public float Damage = 10f;
+	public int Damage = 10;
 	public LayerMask whatToHit;
 	public Transform BulletTrailPrefab;
 	public float effectSpawnRate = 10f;
@@ -51,7 +51,12 @@ public class Weapon : MonoBehaviour
 		Debug.DrawLine (firePointPosition, (mousePosition - firePointPosition) * 100, Color.cyan);
 		if (hit.collider != null) {
 			Debug.DrawLine (firePointPosition, hit.point, Color.red);
-			Debug.Log ("We hit " + hit.collider.name + " and did " + this.Damage + " damage.");
+            Enemy enemy = hit.collider.GetComponent<Enemy>();
+            if (enemy != null)
+            {
+                enemy.DamageEnemy(Damage);
+                Debug.Log("We hit " + hit.collider.name + " and did " + this.Damage + " damage.");
+            }
 		}
 	}
 
