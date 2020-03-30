@@ -7,7 +7,7 @@ public class GameMaster : MonoBehaviour
     public static GameMaster gm;
     public AudioClip respawnAudio;
 
-    void Start()
+    void Awake()
     {
         if (gm == null)
         {
