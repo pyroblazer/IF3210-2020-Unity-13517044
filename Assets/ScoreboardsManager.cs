@@ -1,8 +1,6 @@
 ﻿using UnityEngine;
 using UnityEngine.SceneManagement;
 using System;
-using System.Collections.Generic;
-using UnityEngine.UI;
 using UnityEngine.Networking;
 using System.Text;
 using System.Collections;
@@ -104,7 +102,7 @@ public class ScoreboardsManager : MonoBehaviour
         int tempScoreboardOrder = scoreboardOrder;
         if (Scoreboards != null && Scoreboards.Length > 0)
         {
-            while (scoreboardEntries < 5)
+            while (scoreboardEntries < 20)
             {
                 Debug.Log(tempScoreboardOrder);
                 GUI.TextField(new Rect(200, y, 300, height), "No. " + tempScoreboardOrder + " Username : " + Scoreboards[tempScoreboardOrder].username + " Score : " + Scoreboards[tempScoreboardOrder].score);
@@ -118,7 +116,7 @@ public class ScoreboardsManager : MonoBehaviour
     public void OnPressNext()
     {
         audioManager.PlaySound(pressButtonSound);
-        if (scoreboardOrder < Scoreboards.Length-5)
+        if (scoreboardOrder < Scoreboards.Length-20)
         {
             scoreboardOrder += 1;
         }

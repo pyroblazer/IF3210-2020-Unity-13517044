@@ -36,6 +36,13 @@ public class GameOverUI : MonoBehaviour
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 
+    public void BackToMainMenu()
+    {
+        audioManager.PlaySound(buttonPressSound);
+
+        SceneManager.LoadScene("MainMenu");
+    }
+
     public void OnMouseOver()
     {
         audioManager.PlaySound(mouseHoverSound);
