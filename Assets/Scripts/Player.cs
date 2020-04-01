@@ -1,33 +1,84 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
+using System.Collections;
 
 public class Player : MonoBehaviour
 {
+
     [System.Serializable]
     public class PlayerStats
     {
-        public int Health = 100;
+        public int maxHealth = 100;
+
+        private int _curHealth;
+        public int curHealth
+        {
+            get { return _curHealth; }
+            set { _curHealth = Mathf.Clamp(value, 0, maxHealth); }
+        }
+
+        public void Init()
+        {
+            curHealth = maxHealth;
+        }
     }
 
-    public PlayerStats playerStats = new PlayerStats();
+    public PlayerStats stats = new PlayerStats();
 
     public int fallBoundary = -20;
-    
-    public void Update()
+
+    public string deathSoundName = "DeathVoice";
+    public string damageSoundName = "Grunt";
+
+    private AudioManager audioManager;
+
+    [SerializeField]
+    private StatusIndicator statusIndicator;
+
+    void Start()
     {
-        if (this.transform.position.y <= fallBoundary)
+        stats.Init();
+
+        if (statusIndicator == null)
         {
-            DamagePlayer(999999999);
+            Debug.LogError("No status indicator referenced on Player");
+        }
+        else
+        {
+            statusIndicator.SetHealth(stats.curHealth, stats.maxHealth);
+        }
+
+        audioManager = AudioManager.instance;
+        if (audioManager == null)
+        {
+            Debug.LogError("PANIC! No audiomanager in scene.");
         }
     }
 
-    public void DamagePlayer (int damage)
+    void Update()
     {
-        playerStats.Health -= damage;
-        if (playerStats.Health <= 0)
+        if (transform.position.y <= fallBoundary)
+            DamagePlayer(9999999);
+    }
+
+    public void DamagePlayer(int damage)
+    {
+        stats.curHealth -= damage;
+
+        if (stats.curHealth <= 0)
         {
+            //play death sound
+            audioManager.PlaySound(deathSoundName);
+
+            //kill player
             GameMaster.KillPlayer(this);
         }
+        else
+        {
+            //play damage sound
+            audioManager.PlaySound(damageSoundName);
+        }
+
+        statusIndicator.SetHealth(stats.curHealth, stats.maxHealth);
     }
+
 }
