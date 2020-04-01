@@ -35,7 +35,6 @@ public class ScoreboardsManager : MonoBehaviour
     AudioManager audioManager;
 
     readonly string URI = "http://134.209.97.218:5051";
-    public Text messageText;
     public string NIM = "13517044";
     public JsonScoreboards.Scoreboard[] Scoreboards;
     public int scoreboardOrder = 0;
@@ -90,11 +89,10 @@ public class ScoreboardsManager : MonoBehaviour
             Debug.Log(Scoreboards.GetType());
             Scoreboards = Scoreboards.OrderByDescending(w => w.score).ToArray();
 
-            //messageText.text = "Successfully downloaded scoreboard";
         }
         else
         {
-            //messageText.text = "Failed to upload to scoreboard";
+            //Display Nothing
         }
     }
 
