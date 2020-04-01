@@ -118,5 +118,6 @@ Library eksternal yang digunakan adalah:
  - Thanks to arongranberg for A Star 
  - Thanks to Brackeys for 2D Mega Pack & Guides 
  - Thanks to IF3210 Assistants and Lecturers
+ 
 I apologize if mistakes were made when making this application, especially during COVID-19 isolation when I had a lot of other essential work to do in order to follow government's orders and survive.
 
