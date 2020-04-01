@@ -83,7 +83,7 @@ Library eksternal yang digunakan adalah:
 ![Main Menu](ReadmeImages/MainMenu.png)
 ### Game Scene
 #### Start Game
-![Start Game](ReadmeImages/Start Game.png)
+![Start Game](ReadmeImages/StartGame.png)
 #### Game Action
 ![Game Action](ReadmeImages/GameAction.png)
 #### Update Scoreboard
