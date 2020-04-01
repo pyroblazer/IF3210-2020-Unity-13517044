@@ -103,16 +103,14 @@ Library eksternal yang digunakan adalah:
 ![Start Game](ReadmeImages/StartGame.png)
 #### Game Action
 ![Game Action](ReadmeImages/GameAction.png)
-#### Update Scoreboard
-![Update Scoreboard](ReadmeImages/UpdateScoreboard.png)
 #### Game Over
 ![Game Over](ReadmeImages/GameOver.png)
+#### Update Scoreboard
+![Update Scoreboard](ReadmeImages/UpdateScoreboard.png)
 ### Settings
 ![Settings](ReadmeImages/MainMenu.png)
 ### Scoreboard
 ![Scoreboard](ReadmeImages/Scoreboard.png)
-
-
 
 ## Acknowledgements
 
