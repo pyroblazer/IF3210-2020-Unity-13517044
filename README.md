@@ -1,9 +1,11 @@
-﻿
+﻿﻿
 # Unity 2D Platformer-Zombie Wave Game
 IF3210-2020-Unity-13517044 <br>
 By: Ignatius Timothy Manullang / 13517044 <br>
 ## Deskripsi Aplikasi
 Aplikasi ini merupakan aplikasi permainan yang dibuat dengan Unity.
+
+Anda tiba-tiba berada di sebuah planet asing yang lokasi sebenarnya tidak kalian ketahui. Tiba-tiba terdapat banyak orang yang ingin mendekati anda. Akan tetapi, mengapa mereka terlihat seperti makhluk lain, anehnya mereka bisa menggunakan gravitasi yang rendah untuk terbang. Ternyata mereka ingin menyerang anda. Coba sebisa mungkin untuk bertahan hidup dan mengalahkan semua makhluk-makhluk lain yang ingin menyerang anda.
 
 ## Cara kerja
 Secara default, aplikasi ini dapat dijalankan di Desktop dengan OS Windows dengan mengeksekusi executable file 2D-Platformer-Zombie-Wave-Game.exe
@@ -40,6 +42,21 @@ Dalam aplikasi ini terdapat 4 Scene, yaitu:
 	 - Ada beberapa asset dari Permainan yang static (tidak bergerak) sebagai dekorasi
 - Untuk pemenuhan Spesifikasi m, asset menggunakan 2D Standard Assets di 2D Mega Pack.
 - Untuk pemenuhan Spesifikasi n, terdapat file-file unity pada repo agar bisa diakses di aplikasi dekstop. 
+
+## How To Play
+Untuk bergerak, gunakan W untuk lompat, A untuk bergerak ke kiri, S untuk bergerak ke kanan.
+
+Untuk menembak, gunakan klik Mouse Button kiri.
+
+Untuk mengarahkan tembakan, gunakan Cursor Mouse
+
+Untuk mengalahkan musuh, tembak ke musuh sampai HP mereka habis. Setelah itu, anda akan mendapatkan 1 poin. Kumpulkan poin sebanyak-banyaknya untuk diupload ke Scoreboard Online!
+
+Pemain akan mendapatkan damage jika musuh berhasil menyentuh pemain.
+
+Jangan sampai jatuh ke jurang! Jurang akan langsung menghabiskan HP pemain.
+
+Jika HP pemain habis, maka lives pemain akan berkurang 1. Jika lives pemain mencapai 0, Game Over!
 
 ## Library yang digunakan dan justifikasi penggunaannya
 Library yang digunakan dalam Unity
@@ -83,7 +100,7 @@ Library eksternal yang digunakan adalah:
 ![Main Menu](ReadmeImages/MainMenu.png)
 ### Game Scene
 #### Start Game
-![Start Game](ReadmeImages/Start Game.png)
+![Start Game](ReadmeImages/StartGame.png)
 #### Game Action
 ![Game Action](ReadmeImages/GameAction.png)
 #### Update Scoreboard
